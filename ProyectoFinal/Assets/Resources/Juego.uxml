@@ -1,0 +1,18 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Scripts/EstilosJuego.uss?fileID=7433441132597879392&amp;guid=d3b72ef9a42bd1c4aba8d3f6737c461b&amp;type=3#EstilosJuego" />
+    <ui:VisualElement name="Juego" class="contenedor" style="flex-grow: 1;">
+        <ui:VisualElement name="TopJuego" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); height: 20%;">
+            <ui:VisualElement name="BanderaJuego" picking-mode="Ignore" class="bandera" style="flex-grow: 1; align-self: center; top: 100px;" />
+            <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="DificultadText" class="titulo" style="align-self: center; top: 40px; display: flex;" />
+            <ui:VisualElement name="MonedasJuego" picking-mode="Ignore" class="moneda" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 35px; right: 140px;" />
+            <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="NumMonedas" picking-mode="Ignore" style="position: absolute; -unity-font-definition: initial; -unity-font: url(&apos;project://database/Assets/Fonts/Sedan/Sedan-Regular.ttf?fileID=12800000&amp;guid=4c1a6ff02b5bf2a43836538bc2fdf8cf&amp;type=3#Sedan-Regular&apos;); font-size: 40px; -unity-font-style: bold; right: 50px; top: 55px;" />
+            <ui:VisualElement name="ContenedorCorazones" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                <ui:VisualElement name="cor1" class="corazon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); left: 10px; right: 0;" />
+                <ui:VisualElement name="cor2" class="corazon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); left: 85px;" />
+                <ui:VisualElement name="cor3" class="corazon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); left: 160px;" />
+                <ui:VisualElement name="cor4" class="corazon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); left: 235px;" />
+                <ui:VisualElement name="cor5" class="corazon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); left: 310px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

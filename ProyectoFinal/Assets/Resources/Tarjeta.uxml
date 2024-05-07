@@ -1,0 +1,44 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Scripts/EstilosTarjeta.uss?fileID=7433441132597879392&amp;guid=7958a4526eddffc46a66aea20996971f&amp;type=3#EstilosTarjeta" />
+    <ui:VisualElement name="Tarjeta" picking-mode="Ignore" class="tarjeta" style="flex-grow: 1; margin-bottom: 0; border-left-color: rgb(164, 51, 0); border-right-color: rgb(164, 51, 0); border-top-color: rgb(164, 51, 0); border-bottom-color: rgb(164, 51, 0); border-left-width: 5px; border-right-width: 5px; border-top-width: 5px; border-bottom-width: 5px; border-top-left-radius: 20px; border-bottom-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px;">
+        <ui:VisualElement name="Icon" picking-mode="Ignore" class="icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 0; left: 30px;" />
+        <ui:VisualElement name="Nombre" picking-mode="Ignore" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); height: auto;">
+            <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="NombreTexto" picking-mode="Ignore" class="nombre" style="position: absolute; top: 80px; left: 20px; width: 100px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Insignias" picking-mode="Ignore" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); margin-left: 2px; margin-right: 2px; margin-top: 2px; margin-bottom: 2px; height: -1px; position: absolute; width: -25px; top: 113px; left: -3px; align-self: auto; align-items: center;">
+            <ui:VisualElement picking-mode="Ignore" name="Ing" class="bandera" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/banderas/inglaterra&apos;); top: 0; left: 5px;">
+                <ui:VisualElement picking-mode="Ignore" name="bIng" class="insigniaBronce" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: -2px; left: 30px; display: none;">
+                    <ui:VisualElement name="VisualElement" picking-mode="Ignore" class="insignia" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/insignias/bridgeicon&apos;); top: -1px; left: 4px; height: 26px; width: 26px;" />
+                </ui:VisualElement>
+                <ui:VisualElement picking-mode="Ignore" name="pIng" class="insigniaPlata" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); display: none;">
+                    <ui:VisualElement picking-mode="Ignore" class="insignia" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/insignias/bigbenicon&apos;); top: 6px; left: 5px; width: 25px;" />
+                </ui:VisualElement>
+                <ui:VisualElement picking-mode="Ignore" name="oIng" class="insigniaOro" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); display: none;">
+                    <ui:VisualElement picking-mode="Ignore" class="insignia" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/insignias/londoneyeicon&apos;); top: 5px; left: 5px; height: 25px; width: 25px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement picking-mode="Ignore" name="Francia" class="bandera" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 40px; left: 5px; background-image: resource(&apos;Images/banderas/francia&apos;);">
+                <ui:VisualElement picking-mode="Ignore" name="bFr" class="insigniaBronce" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); display: none;">
+                    <ui:VisualElement picking-mode="Ignore" class="insignia" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/insignias/arcotriunfoicon&apos;); top: 3px; left: 6px; height: 24px; width: 23px;" />
+                </ui:VisualElement>
+                <ui:VisualElement picking-mode="Ignore" name="pFr" class="insigniaPlata" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); display: none;">
+                    <ui:VisualElement picking-mode="Ignore" class="insignia" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/insignias/louvreicon&apos;); top: -4px; left: 4px; height: 28px; width: 26px;" />
+                </ui:VisualElement>
+                <ui:VisualElement picking-mode="Ignore" name="oFr" class="insigniaOro" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); display: none;">
+                    <ui:VisualElement picking-mode="Ignore" class="insignia" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/insignias/notredameicon&apos;); top: 6px; left: 6px; width: 22px; height: 22px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement picking-mode="Ignore" name="Catalan" class="bandera" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/banderas/catalana&apos;); left: 5px; top: 80px;">
+                <ui:VisualElement picking-mode="Ignore" name="bCat" class="insigniaBronce" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); display: none;">
+                    <ui:VisualElement picking-mode="Ignore" class="insignia" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/insignias/barcelonaicon1&apos;); top: 5px; left: 6px; height: 24px; width: 22px;" />
+                </ui:VisualElement>
+                <ui:VisualElement picking-mode="Ignore" name="pCat" class="insigniaPlata" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); display: none;">
+                    <ui:VisualElement picking-mode="Ignore" class="insignia" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/insignias/barcelonaicon2&apos;); top: 3px; left: 7px; height: 24px; width: 21px;" />
+                </ui:VisualElement>
+                <ui:VisualElement picking-mode="Ignore" name="oCat" class="insigniaOro" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); display: none;">
+                    <ui:VisualElement picking-mode="Ignore" class="insignia" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/insignias/barcelonaicon3&apos;); top: 4px; left: 5px; width: 25px; height: 26px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

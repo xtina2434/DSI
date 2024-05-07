@@ -1,0 +1,304 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Scripts/EstilosProyecto.uss?fileID=7433441132597879392&amp;guid=4b75dfa4c60b3eb4693edc73a5a13ec7&amp;type=3#EstilosProyecto" />
+    <ui:VisualElement name="Contenedor" class="contenedor" style="flex-grow: 1; background-color: rgb(224, 224, 224);">
+        <ui:VisualElement name="MenuIzquierda" class="izquierda" style="flex-grow: 1; opacity: 1; display: flex;">
+            <ui:VisualElement name="logo" class="logo" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: none; display: flex;">
+                <ui:VisualElement name="imgIdioverse" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; background-image: resource(&apos;Images/iconos/idioverse&apos;); height: 374px; width: 371px; top: -70px; left: 15px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="botones" class="botones" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                <ui:Button text="JUGAR" display-tooltip-when-elided="true" name="Jugar" class="botonMenu" style="width: 40%; background-image: resource(&apos;Images/botones/Silver Oval Button&apos;);" />
+                <ui:Button text="OPCIONES" display-tooltip-when-elided="true" name="Opciones" class="botonMenu" style="width: 40%; background-image: resource(&apos;Images/botones/Silver Oval Button&apos;);" />
+                <ui:Button text="IDIOMA" display-tooltip-when-elided="true" name="Idioma" class="botonMenu" style="width: 40%; background-image: resource(&apos;Images/botones/Silver Oval Button&apos;);" />
+                <ui:Button text="PERSONAJES" display-tooltip-when-elided="true" name="Personajes" class="botonMenu" style="width: 40%; background-image: resource(&apos;Images/botones/Silver Oval Button&apos;);" />
+                <ui:Button text="INVENTARIO" display-tooltip-when-elided="true" name="Inventario" class="botonMenu" style="width: 40%; background-image: resource(&apos;Images/botones/Silver Oval Button&apos;);" />
+                <ui:Button text="TIENDA" display-tooltip-when-elided="true" name="Tienda" class="botonMenu" style="width: 40%; background-image: resource(&apos;Images/botones/Silver Oval Button&apos;);" />
+                <ui:Button text="SALIR" display-tooltip-when-elided="true" name="Salir" class="botonMenu" style="width: 40%; background-image: resource(&apos;Images/botones/Silver Oval Button&apos;);" />
+            </ui:VisualElement>
+            <ui:VisualElement name="bottom" class="botton bottom" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0);">
+                <ui:Label tabindex="-1" text="Proyecto DSI&#10;Desarrollo de Videojuegos UCM 2023-24&#10;Cristina Muñoz Muñoz &#10;" display-tooltip-when-elided="true" name="Texto" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="PanelDerecha" class="derecha" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+            <ui:VisualElement name="MenuOpciones" class="opciones" style="flex-grow: 1; display: none; transition-timing-function: ease-in-elastic; visibility: visible;">
+                <ui:Label tabindex="-1" text="MENÚ DE OPCIONES" display-tooltip-when-elided="true" name="titulo" class="titulo" style="height: 77px;" />
+                <ui:VisualElement name="contenedorOpciones" style="flex-grow: 1; background-color: rgb(189, 156, 255); border-top-left-radius: 10px;">
+                    <ui:VisualElement name="dificultades" class="dificultades" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                        <ui:VisualElement name="botDificultad" class="toggleDificultad bottomOpciones togglesDif" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 516px; left: 67px;">
+                            <ui:Toggle label="Fácil" name="facil" style="margin-top: 50px; overflow: hidden; position: absolute; top: -400px; left: 100px;" />
+                            <ui:Toggle label="Normal" name="normal" style="position: absolute; top: -150px; left: 100px;" />
+                            <ui:Toggle label="Difícil" focusable="true" name="dificil" value="false" style="margin-bottom: 50px; position: absolute; left: 100px; top: 50px;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="barras" class="barras" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); margin-top: 0; margin-bottom: 0; top: 100px; left: 400px;">
+                            <ui:ProgressBar value="2" name="barra" style="align-self: center; justify-content: center; align-items: stretch; width: 80%; margin-top: 210px; margin-bottom: 0; position: absolute; top: 100px;" />
+                        </ui:VisualElement>
+                        <ui:Label tabindex="-1" text="Selecciona la dificultad" display-tooltip-when-elided="true" enable-rich-text="false" class="barras" style="align-self: center; top: 10px; left: 400px;" />
+                        <ui:VisualElement name="monedas" class="monedas" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                            <ui:Label tabindex="-1" text="Recompensa" display-tooltip-when-elided="true" name="recompensa" style="align-self: center; position: absolute; top: 100px; left: 820px;" />
+                            <ui:VisualElement name="valores" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row; position: absolute; top: 354px; left: 241px;">
+                                <ui:VisualElement name="monedas" style="width: 50%; height: auto; position: absolute;">
+                                    <ui:VisualElement name="mon1" class="moneda" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: -200px; left: 650px; background-image: resource(&apos;Images/iconos/coin&apos;);" />
+                                    <ui:VisualElement name="mon2" class="moneda" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 20px; left: 650px; background-image: resource(&apos;Images/iconos/coin&apos;);" />
+                                    <ui:VisualElement name="mon3" class="moneda" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 220px; left: 650px; background-image: resource(&apos;Images/iconos/coin&apos;);" />
+                                </ui:VisualElement>
+                                <ui:VisualElement name="num" class="monedaTexto" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); align-self: auto; width: 50%; justify-content: space-between; align-items: center; margin-top: 40px; margin-bottom: 50px; font-size: 40px; position: absolute;">
+                                    <ui:Label tabindex="-1" text="3" display-tooltip-when-elided="true" name="3" style="position: absolute; top: -220px; left: 600px;" />
+                                    <ui:Label tabindex="-1" text="7" display-tooltip-when-elided="true" name="7" style="position: absolute; left: 600px; top: 0;" />
+                                    <ui:Label tabindex="-1" text="10" display-tooltip-when-elided="true" name="10" style="position: absolute; left: 590px; top: 200px;" />
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="MenuTienda" class="tienda" style="flex-grow: 1; display: none;">
+                <ui:Label tabindex="-1" text="TIENDA" display-tooltip-when-elided="true" name="titulo" class="titulo" />
+                <ui:VisualElement name="contenedorTienda" style="flex-grow: 1; background-color: rgb(189, 156, 255); border-top-left-radius: 10px;">
+                    <ui:VisualElement name="valores" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row;">
+                        <ui:VisualElement name="izquierda" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row; width: 40%;">
+                            <ui:VisualElement name="monedas" class="monedas monedaTexto" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); align-self: auto; align-items: auto; width: 50%; position: absolute;">
+                                <ui:VisualElement name="10" class="moneda" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); align-items: auto; top: 150px; left: 20px; background-image: resource(&apos;Images/iconos/coin&apos;);" />
+                                <ui:Label tabindex="-1" text="10" display-tooltip-when-elided="true" name="valor10" style="position: absolute; top: 170px; left: 160px;" />
+                                <ui:VisualElement name="15" class="moneda" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); align-items: auto; top: 350px; left: 20px; background-image: resource(&apos;Images/iconos/coin&apos;);" />
+                                <ui:Label tabindex="-1" text="15" display-tooltip-when-elided="true" name="valor15" style="position: absolute; top: 370px; left: 160px;" />
+                                <ui:VisualElement name="15" class="moneda" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); align-items: auto; top: 550px; left: 20px; background-image: resource(&apos;Images/iconos/coin&apos;);" />
+                                <ui:Label tabindex="-1" text="15" display-tooltip-when-elided="true" name="valor15" style="position: absolute; left: 160px; top: 580px;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="objetos" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 287px; position: absolute; height: 860px; top: 0; left: 180px;">
+                                <ui:VisualElement name="corazonTienda" class="animalTienda" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/corazon&apos;); top: 150px; left: 60px; position: absolute;" />
+                                <ui:VisualElement name="leon" class="animalTienda" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/leon&apos;); top: 350px; left: 60px;" />
+                                <ui:VisualElement name="tigre" class="animalTienda" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/tigre&apos;); top: 550px; left: 60px;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="centro" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row; width: 40%;">
+                            <ui:VisualElement name="monedas" class="monedas monedaTexto" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); align-self: auto; align-items: auto; width: 282px; position: absolute; height: 676px; top: 0; left: -80px;">
+                                <ui:VisualElement name="20" class="moneda" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); align-items: auto; top: 150px; left: 80px; background-image: resource(&apos;Images/iconos/coin&apos;);" />
+                                <ui:Label tabindex="-1" text="20" display-tooltip-when-elided="true" name="valor20" style="position: absolute; top: 170px; left: 220px;" />
+                                <ui:VisualElement name="30" class="moneda" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); align-items: auto; top: 350px; left: 80px; background-image: resource(&apos;Images/iconos/coin&apos;);" />
+                                <ui:Label tabindex="-1" text="30" display-tooltip-when-elided="true" name="valor30" style="position: absolute; top: 370px; left: 220px;" />
+                                <ui:VisualElement name="50" class="moneda" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); align-items: auto; top: 550px; left: 80px; background-image: resource(&apos;Images/iconos/coin&apos;);" />
+                                <ui:Label tabindex="-1" text="50" display-tooltip-when-elided="true" name="valor50" style="position: absolute; left: 220px; top: 580px;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="objetos" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 295px; position: absolute; height: 718px; top: 3px; left: 100px;">
+                                <ui:VisualElement name="erizo" class="animalTienda" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/erizo&apos;); top: 140px; left: 120px; position: absolute;" />
+                                <ui:VisualElement name="panda" class="animalTienda" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/panda&apos;); top: 350px; left: 120px;" />
+                                <ui:VisualElement name="unicornio" class="animalTienda" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/unicornio&apos;); top: 550px; left: 120px;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="derecha" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 20%;">
+                            <ui:VisualElement name="misMonedas" class="moneda" style="top: 20px; left: 0;" />
+                            <ui:Label tabindex="-1" text="00" display-tooltip-when-elided="true" name="monedasTienda" class="monedaTexto" style="left: 130px; position: absolute; top: 40px;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="MenuIdioma" class="idioma" style="flex-grow: 1; display: none;">
+                <ui:Label tabindex="-1" text="¿QUÉ IDIOMA QUIERES APRENDER?" display-tooltip-when-elided="true" name="titulo" class="titulo" />
+                <ui:VisualElement name="fondoMenuIdiomas" class="idiomaBackground" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%; background-image: resource(&apos;Images/fondos/londres&apos;); -unity-background-image-tint-color: rgb(255, 255, 255); transition-duration: 1s; transition-timing-function: ease-out; border-top-left-radius: 10px;" />
+                <ui:Label tabindex="-1" text="INSIGNIAS &#10;DISPONIBLES" display-tooltip-when-elided="true" name="insignias" class="monedaTexto" style="position: absolute; top: 150px; left: 240px; font-size: 30px; -unity-text-align: upper-center;" />
+                <ui:VisualElement name="inglaterra" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                    <ui:Button display-tooltip-when-elided="true" name="inglaterra_boton" class="bandera" style="background-image: resource(&apos;Images/banderas/inglaterra&apos;); top: -600px; left: 30px; background-color: rgba(188, 188, 188, 0);" />
+                    <ui:VisualElement name="bronceIng" class="insigniaBronce" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; left: 210px; top: -600px;">
+                        <ui:VisualElement name="puenteLondres" class="insignia" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; background-image: resource(&apos;Images/insignias/bridgeicon&apos;); top: -5px; left: 11px; width: 67px; height: 69px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="plataIng" class="insiginiaPlata" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; left: 310px; top: -600px;">
+                        <ui:VisualElement name="bigBen" class="insignia" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/insignias/bigbenicon&apos;); height: 54px; position: absolute; top: 16px; left: 10px; width: 66px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="oroIng" class="insigniaOro" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; left: 410px; top: -600px;">
+                        <ui:VisualElement name="londonEye" class="insignia" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; background-image: resource(&apos;Images/insignias/londoneyeicon&apos;); top: 10px; left: 10px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="francia" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                    <ui:Button display-tooltip-when-elided="true" name="francia_boton" class="bandera" style="background-image: resource(&apos;Images/banderas/francia&apos;); top: -450px; left: 30px;" />
+                    <ui:VisualElement name="bronceFr" class="insigniaBronce" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; left: 210px; top: -450px;">
+                        <ui:VisualElement name="arcoTriunfo" class="insignia" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; background-image: resource(&apos;Images/insignias/arcotriunfoicon&apos;); top: 7px; left: 17px; height: 61px; width: 56px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="plataFr" class="insiginiaPlata" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; left: 310px; top: -450px;">
+                        <ui:VisualElement name="louvre" class="insignia" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/insignias/louvreicon&apos;); height: 58px; position: absolute; top: 0; left: 10px; width: 69px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="oroFr" class="insigniaOro" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; top: -450px; left: 410px;">
+                        <ui:VisualElement name="notreDame" class="insignia" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; background-image: resource(&apos;Images/insignias/notredameicon&apos;); top: 15px; left: 19px; height: 60px; width: 51px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="cataluna" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                    <ui:Button display-tooltip-when-elided="true" name="catalan_boton" class="bandera" style="background-image: resource(&apos;Images/banderas/catalana&apos;); top: -300px; left: 30px;" />
+                    <ui:VisualElement name="bronceCat" class="insigniaBronce" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; left: 210px; top: -300px;">
+                        <ui:VisualElement name="playa" class="insignia" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; background-image: resource(&apos;Images/insignias/barcelonaicon1&apos;); top: 15px; left: 14px; height: 60px; width: 64px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="plataCat" class="insiginiaPlata" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; left: 310px; top: -300px;">
+                        <ui:VisualElement name="barcelona" class="insignia" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/insignias/barcelonaicon2&apos;); height: 50px; position: absolute; top: 15px; left: 14px; width: 62px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="oroCat" class="insigniaOro" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; top: -300px; left: 410px;">
+                        <ui:VisualElement name="sagradaFamilia" class="insignia" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; background-image: resource(&apos;Images/insignias/barcelonaicon3&apos;); top: 8px; left: 8px; height: 71px; width: 71px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="MenuPersonajes" class="idioma" style="flex-grow: 1; display: none;">
+                <ui:Label tabindex="-1" text="CREA TU PERSONAJE PERSONALIZADO" display-tooltip-when-elided="true" name="titulo" class="titulo" />
+                <ui:VisualElement name="creacion" style="flex-grow: 1; background-color: rgb(189, 156, 255); flex-direction: row; border-top-left-radius: 10px; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0;">
+                    <ui:VisualElement name="izqPersonajes" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 50%;">
+                        <ui:VisualElement name="tarjeta" class="tarjetaMenu" style="flex-grow: 1; top: 40px; left: 36px; background-color: rgb(255, 153, 95);">
+                            <ui:VisualElement name="iconTarjeta" class="animalTarjeta" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 36px; left: 110px; background-image: resource(&apos;Images/iconos/cabeza&apos;); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
+                            <ui:TextField picking-mode="Ignore" label="Nombre" value="nombre" name="InputNombre" style="position: absolute; top: 350px; left: 25px; -unity-font-definition: initial; -unity-font: url(&apos;project://database/Assets/Fonts/Merriweather/Merriweather-Bold.ttf?fileID=12800000&amp;guid=1d7354dab29743344beef092e6bbae5f&amp;type=3#Merriweather-Bold&apos;); font-size: 26px;" />
+                            <ui:Button text="Crear" display-tooltip-when-elided="true" name="botonCrear" class="botonMenu" style="position: absolute; top: 430px; left: 100px; height: 70px; width: 150px;" />
+                            <ui:Button text="Guardar" display-tooltip-when-elided="true" name="botonGuardar" class="botonMenu" style="position: absolute; top: 510px; left: 100px; height: 70px; width: 150px;" />
+                            <ui:VisualElement name="trash" class="trash" style="flex-grow: 1; position: absolute; left: 140px; top: 590px;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="animales" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute;">
+                            <ui:VisualElement name="oso" class="animalTarjeta" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/oso&apos;); left: 430px; bottom: auto; top: 40px;" />
+                            <ui:VisualElement name="perro" class="animalTarjeta" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/perro&apos;); left: 430px; top: 180px;" />
+                            <ui:VisualElement name="lobo" class="animalTarjeta" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/lobo&apos;); left: 430px; top: 330px;" />
+                            <ui:VisualElement name="gato" class="animalTarjeta" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/gato&apos;); top: 470px; left: 430px;" />
+                            <ui:VisualElement name="koala" class="animalTarjeta" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/koala&apos;); top: 610px; left: 430px;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="derPersonajes" style="flex-grow: 1; flex-direction: row; flex-wrap: wrap; justify-content: center; align-self: flex-start; width: 50%; height: 100%;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="MenuJuego" class="idioma" style="flex-grow: 1; display: none; background-color: rgb(189, 156, 255); opacity: 1;">
+                <ui:VisualElement name="ContenedorJuego" style="flex-grow: 1; display: flex;">
+                    <ui:VisualElement name="JuegoFacil" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); display: none; position: absolute;">
+                        <ui:Button display-tooltip-when-elided="true" name="checkFacil" class="checkButton" style="background-color: rgba(188, 188, 188, 0); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; width: 75px; height: 75px;" />
+                        <ui:VisualElement name="Imagenes" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                            <ui:VisualElement name="Manzana" class="animalTarjeta" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 230px; background-image: resource(&apos;Images/iconos/manzana&apos;); left: 120px;" />
+                            <ui:VisualElement name="Agua" class="animalTarjeta" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 420px; background-image: resource(&apos;Images/iconos/agua&apos;); left: 120px;" />
+                            <ui:VisualElement name="Verde" class="animalTarjeta" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 630px; background-image: resource(&apos;Images/iconos/verde&apos;); left: 120px;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Dropdowns" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                            <ui:DropdownField label="Manzana" index="-1" tabindex="3" name="DropdownManzana" class="dropdown" style="top: 280px; left: 400px; width: 500px;" />
+                            <ui:DropdownField label="Agua" index="-1" tabindex="3" name="DropdownAgua" class="dropdown" style="top: 480px; left: 400px; width: 500px;" />
+                            <ui:DropdownField label="Verde" index="-1" tabindex="3" name="DropdownVerde" class="dropdown" style="top: 670px; left: 400px; width: 500px;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="JuegoNormal" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; display: none;">
+                        <ui:VisualElement name="Imagenes" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                            <ui:VisualElement name="movil" class="animalNormal iconoJuego" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/movil&apos;); left: 50px; top: 620px;" />
+                            <ui:VisualElement name="cerdo" class="animalNormal iconoJuego" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/cerdo&apos;); left: 220px; top: 620px; right: 0;" />
+                            <ui:VisualElement name="lapiz" class="animalNormal iconoJuego" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/lapiz&apos;); left: 390px; top: 620px;" />
+                            <ui:VisualElement name="avion" class="animalNormal iconoJuego" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/avion&apos;); left: 560px; top: 620px;" />
+                            <ui:VisualElement name="zapatillas" class="animalNormal iconoJuego" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/zapatillas&apos;); left: 730px; top: 620px;" />
+                            <ui:VisualElement name="ojo" class="animalNormal iconoJuego" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/ojo&apos;); left: 900px; top: 620px;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="botonesGrises" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                            <ui:VisualElement name="slotMovil" class="botonGrisNormal" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 500px; left: 45px;" />
+                            <ui:VisualElement name="slotCerdo" class="botonGrisNormal" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 500px; left: 215px;" />
+                            <ui:VisualElement name="slotLapiz" class="botonGrisNormal" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 500px; left: 390px;" />
+                            <ui:VisualElement name="slotAvion" class="botonGrisNormal" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 500px; left: 555px;" />
+                            <ui:VisualElement name="slotZapatillas" class="botonGrisNormal" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 500px; left: 725px;" />
+                            <ui:VisualElement name="slotOjo" class="botonGrisNormal" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 500px; left: 895px;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="botones" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                            <ui:VisualElement name="itemCerdo" class="botonNormal" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 300px; left: 45px;">
+                                <ui:Label tabindex="-1" text="PORC" display-tooltip-when-elided="true" name="PalabraCerdo" class="textoBotonNormal" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="itemLapiz" class="botonNormal" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 300px; left: 215px;">
+                                <ui:Label tabindex="-1" text="LLAPIS" display-tooltip-when-elided="true" name="PalabraLapiz" class="textoBotonNormal" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="itemOjo" class="botonNormal" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 300px; left: 390px;">
+                                <ui:Label tabindex="-1" text="ULL" display-tooltip-when-elided="true" name="PalabraOjo" class="textoBotonNormal" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="itemMovil" class="botonNormal" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 300px; left: 555px;">
+                                <ui:Label tabindex="-1" text="MÒBIL" display-tooltip-when-elided="true" name="PalabraMovil" class="textoBotonNormal" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="itemAvion" class="botonNormal" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 300px; left: 725px;">
+                                <ui:Label tabindex="-1" text="AVIO" display-tooltip-when-elided="true" name="PalabraAvion" class="textoBotonNormal" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="itemZapatillas" class="botonNormal" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 300px; left: 895px;">
+                                <ui:Label tabindex="-1" text="SABATES" display-tooltip-when-elided="true" name="PalabraZapatos" class="textoBotonNormal" style="font-size: 14px;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:Button display-tooltip-when-elided="true" name="checkNormal" class="checkButton" style="background-color: rgba(188, 188, 188, 0); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; width: 75px; height: 75px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="JuegoDificil" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; display: none;">
+                        <ui:VisualElement name="Imagenes" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                            <ui:VisualElement name="uvas" class="animalNormal iconoJuego" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 220px; left: 150px; background-image: resource(&apos;Images/iconos/uvas&apos;);">
+                                <ui:TextField picking-mode="Ignore" value="uvas" name="uvaInput" class="textField" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="enfermo" class="animalNormal iconoJuego" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 220px; left: 480px; background-image: resource(&apos;Images/iconos/enfermo&apos;);">
+                                <ui:TextField picking-mode="Ignore" value="enfermo" name="enfermoInput" class="textField" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="morado" class="animalNormal iconoJuego" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 220px; left: 825px; background-image: resource(&apos;Images/iconos/morado&apos;);">
+                                <ui:TextField picking-mode="Ignore" value="morado" name="moradoInput" class="textField" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="guitarra" class="animalNormal iconoJuego" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 400px; left: 150px; background-image: resource(&apos;Images/iconos/guitarra&apos;);">
+                                <ui:TextField picking-mode="Ignore" value="guitarra" name="guitarraInput" class="textField" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="rey" class="animalNormal iconoJuego" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 400px; left: 480px; background-image: resource(&apos;Images/iconos/rey&apos;);">
+                                <ui:TextField picking-mode="Ignore" value="rey" name="reyInput" class="textField" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="girasol" class="animalNormal iconoJuego" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 400px; left: 825px; background-image: resource(&apos;Images/iconos/girasol&apos;);">
+                                <ui:TextField picking-mode="Ignore" value="girasol" name="girasolInput" class="textField" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="escalada" class="animalNormal iconoJuego" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/escalada&apos;); left: 150px; top: 600px;">
+                                <ui:TextField picking-mode="Ignore" value="escalar" name="escaladaInput" class="textField" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="miercoles" class="animalNormal iconoJuego" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/Captura&apos;); left: 470px; top: 600px; right: 0; height: 110px; width: 150px;">
+                                <ui:TextField picking-mode="Ignore" value="miércoles" name="miercolesInput" class="textField" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="pajaro" class="animalNormal iconoJuego textField" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/pajaro&apos;); left: 805px; top: 600px;">
+                                <ui:TextField picking-mode="Ignore" value="pájaro" name="pajaroInput" class="textField" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:Button display-tooltip-when-elided="true" name="checkDificil" class="checkButton" style="background-color: rgba(188, 188, 188, 0); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; width: 75px; height: 75px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="Resultado" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; display: none;">
+                        <ui:Label tabindex="-1" text="ENHORABUENA, HAS OBTENIDO" display-tooltip-when-elided="true" name="TextoGanar" class="ganarTexto" style="position: absolute; top: 800px; left: 70px;" />
+                        <ui:VisualElement name="BrIng" class="insigniaBronce insigniaPos" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); display: none;">
+                            <ui:VisualElement name="puenteLondres" class="insignia" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; background-image: resource(&apos;Images/insignias/bridgeicon&apos;); top: -5px; left: 11px; width: 67px; height: 69px;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="PlIng" class="insiginiaPlata insigniaPos" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); display: none;">
+                            <ui:VisualElement name="bigBen" class="insignia" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/insignias/bigbenicon&apos;); height: 54px; position: absolute; top: 16px; left: 10px; width: 66px;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="OroIng" class="insigniaOro insigniaPos" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); display: none;">
+                            <ui:VisualElement name="londonEye" class="insignia" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; background-image: resource(&apos;Images/insignias/londoneyeicon&apos;); top: 10px; left: 10px;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="BrFr" class="insigniaBronce insigniaPos" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); display: none;">
+                            <ui:VisualElement name="arcoTriunfo" class="insignia" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; background-image: resource(&apos;Images/insignias/arcotriunfoicon&apos;); top: 7px; left: 17px; height: 61px; width: 56px;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="PlFr" class="insiginiaPlata insigniaPos" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); display: none;">
+                            <ui:VisualElement name="louvre" class="insignia" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/insignias/louvreicon&apos;); height: 58px; position: absolute; top: 0; left: 10px; width: 69px;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="OroFr" class="insigniaOro insigniaPos" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); display: none;">
+                            <ui:VisualElement name="notreDame" class="insignia" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; background-image: resource(&apos;Images/insignias/notredameicon&apos;); top: 15px; left: 19px; height: 60px; width: 51px;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="BrCat" class="insigniaBronce insigniaPos" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); display: none;">
+                            <ui:VisualElement name="playa" class="insignia" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; background-image: resource(&apos;Images/insignias/barcelonaicon1&apos;); top: 15px; left: 14px; height: 60px; width: 64px;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="PlCat" class="insiginiaPlata insigniaPos" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); display: none;">
+                            <ui:VisualElement name="barcelona" class="insignia" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/insignias/barcelonaicon2&apos;); height: 50px; position: absolute; top: 15px; left: 14px; width: 62px;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="OroCat" class="insigniaOro insigniaPos" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); display: none;">
+                            <ui:VisualElement name="sagradaFamilia" class="insignia" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; background-image: resource(&apos;Images/insignias/barcelonaicon3&apos;); top: 8px; left: 8px; height: 71px; width: 71px;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="MenuInventario" class="idioma" style="flex-grow: 1; display: none;">
+                <ui:Label tabindex="-1" text="INVENTARIO" display-tooltip-when-elided="true" name="titulo" class="titulo" />
+                <ui:VisualElement name="contenedor" style="flex-grow: 1; background-color: rgb(189, 156, 255); flex-direction: row; border-top-left-radius: 10px; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0;">
+                    <ui:VisualElement name="ContenedorInventario" style="flex-grow: 1; position: absolute; top: 180px; left: 150px; height: 250px; width: 150px; display: flex; background-color: rgba(0, 0, 0, 0);" />
+                    <ui:VisualElement name="ContenedorAnimalesInventario" style="flex-grow: 1; position: absolute;">
+                        <ui:VisualElement name="osoInv" class="animalInventario" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/oso&apos;);" />
+                        <ui:VisualElement name="perroInv" class="animalInventario" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/perro&apos;);" />
+                        <ui:VisualElement name="loboInv" class="animalInventario" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/lobo&apos;);" />
+                        <ui:VisualElement name="gatoInv" class="animalInventario" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/gato&apos;);" />
+                        <ui:VisualElement name="koalaInv" class="animalInventario" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/koala&apos;);" />
+                        <ui:VisualElement name="leonInv" class="animalInventario animalGris" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/leon&apos;);" />
+                        <ui:VisualElement name="tigreInv" class="animalInventario animalGris" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/tigre&apos;);" />
+                        <ui:VisualElement name="erizoInv" class="animalInventario animalGris" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/erizo&apos;);" />
+                        <ui:VisualElement name="pandaInv" class="animalInventario animalGris" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/panda&apos;);" />
+                        <ui:VisualElement name="unicornioInv" class="animalInventario animalGris" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/unicornio&apos;);" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="flechaIzq" class="flechaInventario" style="flex-grow: 1; position: absolute; top: 250px; left: 500px; rotate: 0; background-image: resource(&apos;Images/iconos/flecha4&apos;);" />
+                    <ui:VisualElement name="flechaDer" class="flechaInventario" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); top: 250px; left: 800px; background-image: resource(&apos;Images/iconos/flecha3&apos;);" />
+                    <ui:Button text="SELECCIONAR" display-tooltip-when-elided="true" name="botonSeleccionar" class="botonMenu" style="width: 220px; position: absolute; top: 450px; left: 600px; height: 100px;" />
+                    <ui:VisualElement name="corazonesInventario" class="animalInventario" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/corazon&apos;); top: 630px; left: 100px;">
+                        <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="coraInvText" class="monedaTexto" style="position: absolute; left: 150px; top: 10px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="monedasinventario" class="animalInventario" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/iconos/coin&apos;); top: 480px; left: 100px;">
+                        <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="monInvText" class="monedaTexto" style="position: absolute; left: 150px; top: 30px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
